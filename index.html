@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelado - Baixar Vídeos e Músicas do YouTube</title>
+    <style>
+        /* Modo Escuro e Estilo Windows XP */
+        body {
+            background-color: #181818;
+            color: white;
+            font-family: "Arial", sans-serif;
+        }
+
+        h1 {
+            color: #00aaff;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="url"] {
+            width: 100%;
+        }
+
+        button {
+            background-color: #0078d4;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gelado - Baixe Vídeos ou Músicas do YouTube</h1>
+        <form action="/baixar" method="POST">
+            <label for="url">URL do YouTube:</label>
+            <input type="url" id="url" name="url" required placeholder="Cole o link do YouTube aqui">
+
+            <label for="tipo">Escolha o tipo de arquivo:</label>
+            <select name="tipo" id="tipo" required>
+                <option value="mp3">MP3</option>
+                <option value="mp4">MP4</option>
+            </select>
+
+            <label for="qualidade">Escolha a qualidade (somente para MP4):</label>
+            <select name="qualidade" id="qualidade">
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+                <option value="360p">360p</option>
+            </select>
+
+            <button type="submit">Baixar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gelado - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
